@@ -2,614 +2,404 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>markkeeble.ca</title>
-    <link rel="icon" href="./css/images/MK.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=PT+Sans|Raleway|Roboto|Roboto+Slab&display=swap');
-        @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-      
-      @keyframes ascension {
-        0% {background-image: url(css/images/thumbnails/Ascension/Ascension1.png)};
-        20% {background-image: url(css/images/thumbnails/Ascension/Ascension2.png)};
-        40% {background-image: url(css/images/thumbnails/Ascension/Ascension3.png)};
-        60% {background-image: url(css/images/thumbnails/Ascension/Ascension4.png)};
-        80% {background-image: url(css/images/thumbnails/Ascension/Ascension5.png)};
-      }
-        
-      #ascensionAnim {
-        background-image: url(css/images/thumbnails/Ascension/Ascension1.png);
-        background-position: center;
-        background-size: cover;
-        
-        animation-name: ascension;
-        animation-duration: 20s;
-        animation-iteration-count: infinite;
-      }
-      
-        * {
-            margin: 0;
-            padding: 0;
-            line-height: 2em;
-        }
-        /* Header */
-        
-        #header {
-          display: grid;
-          grid-template-columns: 30% auto;
-      }
-      
-      .gridThree {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        
-        font-family: 'Raleway';
-        font-size: 1.25em;
-        text-align: center;
-        
-      }
-      
-      .gridThree > a {
-        position: relative;
-        top: 50%;
-        transform: translate(3.5vw, -16.67%);
-        color: black;
-        text-decoration: none;
-        
-        font-family: 'PT Sans';
-      }
-      
-      .gridThree > a:hover {
-        color: blue;
-      }
-      
-        /* Content Header */
-        #contentImage {
-            background-image: url(./css/images/backgroundimage.png);
-            background-size: contain;
-            background-repeat: repeat;
-            background-position: left -50px center;
-            min-height: 42.5vh;
-        }
-        
-        #contentTitle {
-            position: relative;
-            top: 0;
-          left: 200px;
-            background-color: blue;
-        }
-        
-        .centerText {
-            text-align: center;
-        }
-        
-        #mainTitleText {
-            font-family: 'Raleway', 'serif';
-            font-size: 4em;
-            font-weight: 100;
-            line-height: 1.5em;
-        }
-        
-        #subTitleText {
-            font-family: 'Raleway', 'serif';
-            font-size: 2em;
-            font-weight: 100;
-            line-height: 1.75em;
-        }
-        /* Common */
-        
-        .subsection {
-            margin-top: 1vh;
-            margin-bottom: 1vh;
-        }
-        /* TLDR */
-        
-        #tldrContainer {
-            font-size: 1.25em;
-            font-family: 'Raleway', 'Serif';
-            padding-left: 20%;
-            padding-right: 20%;
-        }
-        
-        #tldrTitle {
-            font-size: 1.5em;
-        }
-        
-        #tldrContent {}
-        /* Platforms */
-        
-        #platformsContainer {
-            font-size: 1.25em;
-            font-family: 'Raleway', 'Serif';
-            padding-left: 20%;
-            padding-right: 20%;
-        }
-        
-        #platformsTitle {
-            font-size: 1.5em;
-        }
-        
-        #platformsContent {}
-        
-        #platformsGrid {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            text-align: center;
-        }
-        
-        .platformsIMG {
-            width: 90%;
-            margin-left: 5%;
-            margin-right: 5%;
-            border: 1px solid black;
-        }
-        
-        .platformsGridTitle {
-            font-size: 1.25em;
-            font-weight: 100;
-        }
-        /* footer */
-        
-        #footer {
-            padding-left: 40%;
-            padding-right: 40%;
-            text-align: center;
-            font-family: 'Raleway';
-        }
-        
-        #emailLine {
-            font-size: 0.9em;
-        }
-        
-        #footerGrid {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            padding-left: 20%;
-            padding-right: 20%;
-            padding-top: 5%;
-            padding-bottom: 5%;
-        }
-        
-        .footerGridIMG {
-            position: relative;
-            width: 75%;
-          
-          filter: brightness(0);
-        }
-      
-      .footerGridIMG:hover {
-        filter: brightness(1);
-      }  
-      
-        /* Portfolio */
-        
-        #portfolioDrop {
-            position: relative;
-            top: 0px;
-            right: 0px;
-            display: none;
-            grid-template-columns: auto auto auto;
-            font-size: 0.75em;
-            height: auto;
-            background-color: red;
-        }
-        
-        #portfolioStack {
-            padding-left: 20%;
-            padding-right: 20%;
-        }
-        
-        #portfolioTitle {
-            font-size: 2em;
-            font-family: 'Raleway';
-            text-align: center;
-        }
-        
-        #portfolioDisplay {}
-        
-        #catagories {
-            font-size: 1.25em;
-            font-family: 'Raleway';
-            text-align: center;
-            width: 100%;
-            margin-bottom: 2.5%;
-        }
-        /* Languages/Environment */
-        
-        #languagesContainer {
-            font-size: 1.25em;
-            font-family: 'Raleway', 'Serif';
-            padding-left: 20%;
-            padding-right: 20%;
-          
-            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(43,43,43,1) 39%, rgba(0,0,0,1) 100%);
-          color: white;
-        }
-        
-        #languagesTitle {
-          font-size: 2em;
-          text-align: center;
-        }
-      
-        #languagesGrid {
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            text-align: center;
-        }
-        
-        .languagesGridTitle {
-            font-size: 2em;
-            font-weight: 100;
-          padding: 2%;
-        }
-        /* Start */
-        
-        .startHidden {
-            display: none;
-        }
-        
-      #gamesGrid {
-          display: grid;
-          grid-template-columns: auto;
-        
-          margin-top: 2%;
-          margin-bottom: 2%;
-        }
-      
-      .gameContainer {
-        font-family: 'Raleway';
-        border: 1px solid black;
-        padding: 2%;
-      }
-      
-      .gameGridContainer {
-        display: grid;
-        grid-template-columns: auto auto;
-        
-        margin-bottom: 2%;
-      }
-      
-      .gameBlock {
-        display: grid;
-        grid-template-columns: auto;
-        filter: drop-shadow(2px 5px 85 black);
-      }
-        
-      .gameBlock > a {
-          font-size: 1.5em;
-      }
-
-      #gamesIntro {
-        font-family: 'Raleway';
-      }
-      
-      .gameThumb {
-        display: grid;
-        grid-template-columns: auto;
-        
-        text-align: center;
-        
-        border: 1px solid black;
-      }
-      
-      .gameThumbText {
-        font-size: 1.5em;
-      }
-      
-      #gameName {
-        font-size: 2.5em;
-      }
-      
-      .gameText {
-        font-size: 1.5em;
-      }
-      
-        .comingSoon {
-            font-family: 'Raleway';
-            font-size: 1.25em;
-        }
-        
-        #portfolioMusic {
-            font-family: 'Raleway';
-            font-size: 1.75em;
-            text-align: center;
-        }
-        
-        #musicGrid {
-            display: grid;
-            grid-template-columns: auto auto;
-        } 
-      
-      /* Name */
-      @media only screen and (max-width: 1920px) {
-        #nameText {
-        position: relative;
-        left: 2vw;
-        font-family: 'Raleway';
-        font-size: 4em;
-        }  
-      }
-      
-      @media only screen and (max-width: 1224px) {
-        #nameText {
-        position: relative;
-        left: 2vw;
-        font-family: 'Raleway';
-        font-size: 3em;
-        }  
-      }
-      
-      @media only screen and (max-width: 600px) {
-        #nameText {
-        position: relative;
-        left: 2vw;
-        font-family: 'Raleway';
-        font-size: 2em;
-        }  
-      }
-      
-      #nameGrid {
-        display: grid;
-        grid-template-columns: auto auto;
-      }
-      
-      #selfTitle {
-        position: relative;
-        left: 2vw;
-        
-        color: white;
-        
-        font-family: 'Raleway';
-        font-size: 2em;
-      }
-    </style>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>markkeeble.ca</title>
+  <link rel="icon" href="./css/images/MK.png">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <div id="header">
-      <p id="nameText">Mark Keeble</p>
-      <div class="gridThree">
-        <a href="./documents/ResumeV1.pdf" target="_blank">Resume</a>
-        <a href="https://www.linkedin.com/in/mark-keeble-9547b8194/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/MarkKeeble14?tab=repositories" target="_blank">GitHub</a>
+    <p id="nameText">Mark Keeble</p>
+    <div class="gridThree">
+      <a href="./documents/Mark%20Keeble.pdf" target="_blank">Resume</a>
+      <a href="https://www.linkedin.com/in/mark-keeble-9547b8194/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/MarkKeeble14?tab=repositories" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div id="contentHeader">
+    <div id="contentImage">
+      <p id="selfTitle">BCIT CST Student</p>
+    </div>
+  </div>
+  <div id="mainContent">
+    <div id="portfolioStack">
+      <p id="portfolioTitle">Portfolio</p>
+      <form>
+        <select id="catagories" name="catagories">
+          <option value="base">Select Catagory!</option>
+          <option value="games">Games</option>
+          <option value="desktopApplications">Desktop Applications</option>
+          <option value="websites">Websites</option>
+          <option value="musicProduction">Music Production</option>
+        </select>
+      </form>
+      <div id="portfolioGames" class="startHidden">
+        <div id="gamesIntro">
+          <p class="gamesText">All games from before 2020 were created during high school and are very unpolished due to
+            my desire to branch out and explore different genres and mechanics. Also, any games that were made with
+            Gamemaker are likely to be extremely buggy. I made them on GameMaker 1.4 which has been depreciated for
+            quite awhile. I only exported them into .exe's recently so there might be version inconsistencies.</p>
+          <p>Clicking on the title of a game will download an .exe that you can play if you want! I promsie you it's not
+            a virus, even if google's gonna tell you that it is!</p>
+        </div>
+        <div id="gamesGrid">
+
+          <!-- Ascension -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/Ascension.exe" id="gameName">Ascension</a>
+                <p class="gameText">Date: January – March 2019</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Solo Project</p>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+              
+              <div class="gameThumbIMG" id="ascensionAnim">
+              </div>
+              
+            </div>
+            <p><span><b>Blurb: </b></span>With rising waves crashing underneath you, the only objective is to stay above
+              water. Jump and avoid obsticles in order to find the flag that'll spawn somewhere overhead.</p>
+            <p><span><b>Description: </b></span>A procedurally generated platformer with different environments and
+              corresponding physics materials. Also, the game will gradually speed up over time. You can rack up more
+              points if you wish before advancing to the next level, or play it safe and jump at the flag as soon as you
+              spot it.</p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+
+          <!-- Lava -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/The Floor Really Is Lava.exe" id="gameName">The Floor Really Is Lava</a>
+                <p class="gameText">Date: November – December 2019</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Solo Project</p>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="lavaAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+
+          <!-- A Way Down -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/A Way Down.exe" id="gameName">A Way Down</a>
+                <p class="gameText">Date: May – July 2019</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Art</p><p>Quentin Leech</p>
+                  <p>Art & Co-Programmer</p><p>Moe Baydoun</p>
+                  <p></p><p>Zak Thompson</p>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="downAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+          
+          <!-- Case Study -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/The Curious Case Study Of Mark Keeble.exe" id="gameName">The Curious Case Study of Me</a>
+                <p class="gameText">Date: March 2019</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Solo Project</p>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="studyAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+          
+          <!-- Star Pong -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/StarPong.exe" id="gameName">Star Pong</a>
+                <p class="gameText">Date: September 2019</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Solo Project</p>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="pongAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+
+          <!-- Crypt Walker -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/Crypt Walker.exe" id="gameName">Crypt Walker</a>
+                <p class="gameText">Date: Spring - Summer 2018</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Art</p><p>Timothy Saksono</p>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="cryptAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+
+          <!-- Blue Berry Boy -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/Blue Berry Boy.exe" id="gameName">Blue Berry Boy</a>
+                <p class="gameText">Date: Spring 2018</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Solo Project</p>
+                  <br/>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="berryAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+
+          <!-- Fields of Ardelon -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/Fields Of Ardelon.exe" id="gameName">Fields of Ardelon</a>
+                <p class="gameText">Date: Spring 2018</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Art</p><p>Timothy Saksono</p>
+                  <p>Co-Programmer</p><p>Nikhil Prasad</p>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="fieldsAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+
+          <!-- Alien Showmatch -->
+          <div class="gameContainer">
+            <div class="gameGridContainer">
+              <div class="gameBlock">
+                <a href="./games/Alien Showmatch.exe" id="gameName">Alien Showmatch</a>
+                <p class="gameText">Date: Winter - Spring 2018</p>
+                <p class="gameText">Collaborators:</p>
+                <div class="collabList">
+                  <p>Art</p><p>Timothy Saksono</p>
+                  <p>Co-Programmer</p><p>Nikhil Prasad</p>
+                  <br/>
+                  <br/>
+                </div> 
+                <p class="gameText">Engine: Zero Engine</p>
+              </div>
+                <div class="gameThumbIMG" id="alienAnim">
+                </div>
+            </div>
+            <p><span><b>Blurb: </b></span></p>
+            <p><span><b>Description: </b></span></p>
+            <p><span><b>Experience: </b></span></p>
+          </div>
+        </div>
+      </div>
+      <div id="portfolioApplications" class="startHidden">
+        <p class="comingSoon">Coming Soon!</p>
+      </div>
+      <div id="portfolioWebsites" class="startHidden">
+        <p class="comingSoon">Coming Soon!</p>
+      </div>
+      <div id="portfolioMusic" class="startHidden">
+        <div id="musicGrid">
+          <a id="soundcloud" href="https://soundcloud.com/user-195792925" target="_blank">Soundcloud</a>
+          <a id="beatstars" href="https://www.beatstars.com/oribeau/tracks" target="_blank">BeatStars</a>
+        </div>
       </div>
     </div>
-  <div id="contentHeader">
-            <div id="contentImage">
-            <p id="selfTitle">BCIT CST Student</p>
-            </div>
-         </div>
-    <div id="mainContent">
-        <div id="portfolioStack">
-            <p id="portfolioTitle">Portfolio</p>
-            <form>
-                <select id="catagories" name="catagories">
-                    <option value="base">Select Catagory!</option>
-                    <option value="games">Games</option>
-                    <option value="desktopApplications">Desktop Applications</option>
-                    <option value="websites">Websites</option>
-                    <option value="musicProduction">Music Production</option>
-                </select>
-            </form>
-            <div id="portfolioGames" class="startHidden">
-              <div id="gamesIntro">
-                <p>All games from before 2020 were created during high school. I unfortunetely rarely fully "finished" a game due to my desire to branch out and explore different genres and mechanics. Also any games that were made with Gamemaker might be extremely buggy. I made them on GameMaker 1.4 which has been depreciated for quite awhile. I only exported them into .exe's recently so there might be version inconsistencies.</p>
-                <p>Clicking on the title of a game will download an .exe that you can play if you want! I promsie you it's not a virus, even if google's gonna tell you that it is!</p>
-              </div>
-              <div id="gamesGrid">
-                
-              <!-- Ascension -->
-                <div class="gameContainer">
-                  <div class="gameGridContainer">
-                    <div class="gameBlock">
-                      <a href="./games/Ascension.exe" id="gameName">Ascension</a>
-                      <p class="gameText">Date: January – March 2019</p>
-                      <div class="collaborators">
-                        <p class="gameText">Collaborators:</p>
-                        <p>N/A</p>
-                      </div>  
-                      <p class="gameText">Engine: Zero Engine</p>
-                    </div>
-                  <div class="gameThumb" id="ascensionAnim">
-                    <p class="gameThumbText">Ascension</p>
-                  </div>
-                </div>
-                <p><span><b>Blurb: </b></span>With rising waves crashing underneath you, the only objective is to stay above water. Jump and avoid obsticles in order to find the flag that'll spawn somewhere overhead.</p>
-                <p><span><b>Description: </b></span>A procedurally generated platformer with different environments and corresponding physics materials. Also, the game will gradually speed up over time. You can rack up more points if you wish before advancing to the next level, or play it safe and jump at the flag as soon as you spot it.</p>
-                <p><span><b>Experience: </b></span></p>
-                </div>
-                <!-- Lava Date: November - December 2019 -->
-                  <div class="gameBlock">
-                        <a href="./games/A%20Way%20Down.exe">A Way Down</a>
-                        <p>Date: May - July 2019</p>
-                        <p>Collaborators: Quentin Leech (Art), Moe Baydoun (Co-Programmer), Zak Thompson (Art)</p>
-                        <p>Engine: Zero Engine</p>
-                        <p>Description: </p>
-                    </div>
-                    <div class="gameBlock">
-                        <a href="./games/The%20Curious%20Case%20Study%20Of%20Mark%20Keeble.exe">The Curious Case Study of Me</a>
-                        <p>Date: March 2019</p>
-                        <p>Collaborators: N/A</p>
-                        <p>Engine: Zero Engine</p>
-                        <p>Description: </p>
-                    </div>
-                    <div class="gameBlock">
-                        <a href="./games/StarPong.exe">Star Pong</a>
-                        <p>Date: September 2019</p>
-                        <p>Collaborators: N/A</p>
-                        <p>Engine: Zero Engine</p>
-                        <p>Description: </p>
-                    </div>
-                    <div class="gameBlock">
-                        <a href="./games/Crypt%20Walker.exe">Crypt Walker</a>
-                        <p>Date: Spring - Summer 2018</p>
-                        <p>Collaborators: Timothy Saksono (Art)</p>
-                        <p>Engine: GameMaker</p>
-                        <p>Description: </p>
-                    </div>
-                    <div class="gameBlock">
-                        <a href="./games/Blue%20Berry%20Boy.exe">Blue Berry Boy</a>
-                        <p>Date: Spring 2018</p>
-                        <p>Collaborators: N/A</p>
-                        <p>Engine: GameMaker</p>
-                        <p>Description: </p>
-                    </div>
-                    <div class="gameBlock">
-                        <a href="./games/Fields%20of%20Ardelon.exe">Fields of Ardelon</a>
-                        <p>Date: Spring 2018</p>
-                        <p>Collaborators: Timothy Saksono (Art), Nikhil Prasad (Co-Programmer)</p>
-                        <p>Engine: GameMaker</p>
-                        <p>Description: </p>
-                    </div>
-                    <div class="gameBlock">
-                        <a href="./games/Alien%20Showmatch.exe">Alien Showmatch</a>
-                        <p>Date: Winter 2018 - Spring 2019</p>
-                        <p>Collaborators: Timothy Saksono (Art), Nikhil Prasad (Co-Programmer)</p>
-                        <p>Engine: GameMaker</p>
-                        <p>Description: </p>
-                    </div>
-                </div>
-            </div>
-            <div id="portfolioApplications" class="startHidden">
-                <p class="comingSoon">Coming Soon!</p>
-            </div>
-            <div id="portfolioWebsites" class="startHidden">
-                <p class="comingSoon">Coming Soon!</p>
-            </div>
-            <div id="portfolioMusic" class="startHidden">
-                <div id="musicGrid">
-                    <a id="soundcloud" href="https://soundcloud.com/user-195792925" target="_blank">Soundcloud</a>
-                    <a id="beatstars" href="https://www.beatstars.com/oribeau/tracks" target="_blank">BeatStars</a>
-                </div>
-            </div>
-        </div>
-        <div id="tldrContainer" class="subsection">
-            <p id="tldrTitle" class="centerText">TL;DR</p>
-            <p id="tldrContent">I'm currently attending BCITs CST program. I've elected to participate in their co-op program which is only available to the top 50 students in CST.</p>
-        </div>
-        <!--
-          <div id="platformsContainer" class="subsection">
-              <p id="platformsTitle">Platforms</p>
-              <div id="platformsGrid">
-
-                <p class="platformsGridTitle">Web</p>
-                <p class="platformsGridTitle">Mobile</p>
-                <p class="platformsGridTitle">Software</p>
-
-                <img src="../css/images/Skyline.jpg" class="platformsIMG">
-                <img src="../css/images/Skyline.jpg" class="platformsIMG">
-                <img src="../css/images/Skyline.jpg" class="platformsIMG">
-
-                <p class="platformsDescrip">Practice with Application development.</p>
-                <p class="platformsDescrip">Practice with Application development.</p>
-                <p class="platformsDescrip">Practice with Application development. </p>
-              </div>
-            </div>
-          -->
-        <div id="languagesContainer" class="subsection">
-            <p id="languagesTitle">Languages</p>
-            <div id="languagesGrid">
-                <!-- Row 1 | Titles -->
-                <p class="languagesGridTitle">Java</p>
-                <p class="languagesGridTitle">HTML5</p>
-                <p class="languagesGridTitle">CSS3</p>
-                <p class="languagesGridTitle">Javascript</p>
-            </div>
-        </div>
+    <div id="tldrContainer" class="subsection">
+      <p id="tldrTitle" class="centerText">TL;DR</p>
+      <p id="tldrContent">I'm currently attending BCITs CST program. I've elected to participate in their co-op program
+        which is only available to the top 50 students in CST.</p>
     </div>
-    <div id="footer">
-        <p id="devLine">Mark Keeble Software Dev.</p>
-        <a id="emailLine" href="mailto:markkeeble14@gmail.com">markkeeble14@gmail.com</a>
-        <div id="footerGrid">
-            <a href="https://github.com/MarkKeeble14?tab=repositories" target="_blank"><img src="./css/images/github.png" class="footerGridIMG"></a>
-            <a href="https://www.instagram.com/keeble.mark/" target="_blank"><img src="./css/images/insta.png" class="footerGridIMG"></a>
-            <a href="https://twitter.com/Or1beau" target="_blank"><img src="./css/images/twitter.png" class="footerGridIMG"></a>
+    <!--
+      <div id="platformsContainer" class="subsection">
+          <p id="platformsTitle">Platforms</p>
+          <div id="platformsGrid">
+
+            <p class="platformsGridTitle">Web</p>
+            <p class="platformsGridTitle">Mobile</p>
+            <p class="platformsGridTitle">Software</p>
+
+            <img src="../css/images/Skyline.jpg" class="platformsIMG">
+            <img src="../css/images/Skyline.jpg" class="platformsIMG">
+            <img src="../css/images/Skyline.jpg" class="platformsIMG">
+
+            <p class="platformsDescrip">Practice with Application development.</p>
+            <p class="platformsDescrip">Practice with Application development.</p>
+            <p class="platformsDescrip">Practice with Application development. </p>
+          </div>
         </div>
+      -->
+    <div id="languagesContainer" class="subsection">
+      <p id="languagesTitle">Languages</p>
+      <div id="languagesGrid">
+        <!-- Row 1 | Titles -->
+        <p class="languagesGridTitle">Java</p>
+        <p class="languagesGridTitle">HTML5</p>
+        <p class="languagesGridTitle">CSS3</p>
+        <p class="languagesGridTitle">Javascript</p>
+      </div>
     </div>
-    <script>
-      var control = 0; 
-      var scrollDir = 0; 
-      ratio = 0; 
-      increment = 0; 
-      console.log("Start: " + control);
-      
-      window.onscroll = function(e) { 
-          // print "false" if direction is down and "true" if up 
-          // console.log(this.oldScroll > this.scrollY); 
-          
-          if (Math.abs(control) < 300) {  
-            if (this.oldScroll < this.scrollY) { 
-              control -= increment*3; 
-            } 
-            else { 
-              control += increment*3; 
-            }
+  </div>
+  <div id="footer">
+    <p id="devLine">Mark Keeble Software Dev.</p>
+    <a id="emailLine" href="mailto:markkeeble14@gmail.com">markkeeble14@gmail.com</a>
+    <div id="footerGrid">
+      <a href="https://github.com/MarkKeeble14?tab=repositories" target="_blank"><img src="./css/images/github.png"
+          class="footerGridIMG"></a>
+      <a href="https://www.instagram.com/keeble.mark/" target="_blank"><img src="./css/images/insta.png"
+          class="footerGridIMG"></a>
+      <a href="https://twitter.com/Or1beau" target="_blank"><img src="./css/images/twitter.png"
+          class="footerGridIMG"></a>
+    </div>
+  </div>
+  <script>
+    var control = 0;
+    var scrollDir = 0;
+    ratio = 0;
+    increment = 0;
+    console.log("Start: " + control);
 
-            // console.log("On Scroll" + control); 
-            scrollDir = this.oldScroll > this.scrollY; 
-            this.oldScroll = this.scrollY; 
-            }
-        
-            increment = 3;
-          }
-          
-          setInterval(function() { 
-            if (Math.abs(control) > 1) { 
-              $("#contentImage").css('background-position', 'left ' + parseInt(2*control) + 'px center'); 
-              
-              control-= control/100; 
-              
-              // console.log("On Update: " + control); 
-            } else {
-              control = 0;
-            }
-          }, 1);
-      
-    </script>
-    <script>
-        $("#catagories").change(function() {
-            var selectedVal = $("#catagories option:selected").val();
-            console.log(selectedVal);
+    window.onscroll = function (e) {
+      // print "false" if direction is down and "true" if up 
+      // console.log(this.oldScroll > this.scrollY); 
 
-            if (selectedVal === "base") {
-                console.log("0");
+      if (Math.abs(control) < 300) {
+        if (this.oldScroll < this.scrollY) {
+          control -= increment * 3;
+        } else {
+          control += increment * 3;
+        }
 
-                $("#portfolioGames").css("display", "none");
-                $("#portfolioApplications").css("display", "none");
-                $("#portfolioWebsites").css("display", "none");
-                $("#portfolioMusic").css("display", "none");
-            } else if (selectedVal === "games") {
-                console.log("1");
+        // console.log("On Scroll" + control); 
+        scrollDir = this.oldScroll > this.scrollY;
+        this.oldScroll = this.scrollY;
+      }
 
-                $("#portfolioGames").css("display", "block");
-                $("#portfolioApplications").css("display", "none");
-                $("#portfolioWebsites").css("display", "none");
-                $("#portfolioMusic").css("display", "none");
-            } else if (selectedVal === "desktopApplications") {
-                console.log("2");
+      increment = 3;
+    }
 
-                $("#portfolioGames").css("display", "none");
-                $("#portfolioApplications").css("display", "block");
-                $("#portfolioWebsites").css("display", "none");
-                $("#portfolioMusic").css("display", "none");
-            } else if (selectedVal === "websites") {
-                console.log("3");
+    setInterval(function () {
+      if (Math.abs(control) > 1) {
+        $("#contentImage").css('background-position', 'left ' + parseInt(2 * control) + 'px center');
 
-                $("#portfolioGames").css("display", "none");
-                $("#portfolioApplications").css("display", "none");
-                $("#portfolioWebsites").css("display", "block");
-                $("#portfolioMusic").css("display", "none");
-            } else {
-                console.log("4");
+        control -= control / 100;
 
-                $("#portfolioGames").css("display", "none");
-                $("#portfolioApplications").css("display", "none");
-                $("#portfolioWebsites").css("display", "none");
-                $("#portfolioMusic").css("display", "block");
-            }
-        });
-    </script>
+        // console.log("On Update: " + control); 
+      } else {
+        control = 0;
+      }
+    }, 1);
+  </script>
+  <script>
+    $("#catagories").change(function () {
+      var selectedVal = $("#catagories option:selected").val();
+      console.log(selectedVal);
+
+      if (selectedVal === "base") {
+        console.log("0");
+
+        $("#portfolioGames").css("display", "none");
+        $("#portfolioApplications").css("display", "none");
+        $("#portfolioWebsites").css("display", "none");
+        $("#portfolioMusic").css("display", "none");
+      } else if (selectedVal === "games") {
+        console.log("1");
+
+        $("#portfolioGames").css("display", "block");
+        $("#portfolioApplications").css("display", "none");
+        $("#portfolioWebsites").css("display", "none");
+        $("#portfolioMusic").css("display", "none");
+      } else if (selectedVal === "desktopApplications") {
+        console.log("2");
+
+        $("#portfolioGames").css("display", "none");
+        $("#portfolioApplications").css("display", "block");
+        $("#portfolioWebsites").css("display", "none");
+        $("#portfolioMusic").css("display", "none");
+      } else if (selectedVal === "websites") {
+        console.log("3");
+
+        $("#portfolioGames").css("display", "none");
+        $("#portfolioApplications").css("display", "none");
+        $("#portfolioWebsites").css("display", "block");
+        $("#portfolioMusic").css("display", "none");
+      } else {
+        console.log("4");
+
+        $("#portfolioGames").css("display", "none");
+        $("#portfolioApplications").css("display", "none");
+        $("#portfolioWebsites").css("display", "none");
+        $("#portfolioMusic").css("display", "block");
+      }
+    });
+  </script>
 </body>
 
 </html>

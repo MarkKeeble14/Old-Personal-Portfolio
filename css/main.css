@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Raleway|Roboto|Roboto+Slab&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+    @keyframes ascension {
+      0% {
+        background-image: url(images/thumbnails/Ascension/Ascension1.png);
+      }
+
+      20% {
+        background-image: url(images/thumbnails/Ascension/Ascension2.png);
+      }
+
+      40% {
+        background-image: url(images/thumbnails/Ascension/Ascension3.png);
+      }
+
+      60% {
+        background-image: url(images/thumbnails/Ascension/Ascension4.png);
+      }
+
+      80% {
+        background-image: url(images/thumbnails/Ascension/Ascension5.png);
+      }
+    }
+
+    #ascensionAnim {
+      background-image: url(images/thumbnails/Ascension/Ascension1.png);
+      background-position: center;
+      background-size: contain;
+
+      animation-name: ascension;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes lava {
+      0% {
+        background-image: url(images/thumbnails/Lava/lava.png);
+      }
+
+      33% {
+        background-image: url(images/thumbnails/Lava/Lava2.png);
+      }
+
+      66% {
+        background-image: url(images/thumbnails/Lava/Lava3.png);
+      }
+    }
+
+    #lavaAnim {
+      background-image: url(images/thumbnails/Lava/lava.png);
+      background-position: center;
+      background-size: contain;
+
+      animation-name: lava;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes down {
+        0% {
+            background-image: url(images/thumbnails/AWayDown/AWayDown1.png);
+        }
+    }
+
+    #downAnim {
+        background-image: url(images/thumbnails/AWayDown/AWayDown1.png);
+        background-position: center;
+        background-size: contain;
+
+        animation-name: down;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes study {
+        0% {
+          background-image: url(images/thumbnails/TheCuriousCaseStudyofMarkKeeble/TheCuriousCaseStudyofMarkKeeble.png);
+        }
+  
+        20% {
+            background-image: url(images/thumbnails/TheCuriousCaseStudyofMarkKeeble/TheCuriousCaseStudyofMarkKeeble2.png);
+        }
+  
+        40% {
+            background-image: url(images/thumbnails/TheCuriousCaseStudyofMarkKeeble/TheCuriousCaseStudyofMarkKeeble3.png);
+        }
+  
+        60% {
+            background-image: url(images/thumbnails/TheCuriousCaseStudyofMarkKeeble/TheCuriousCaseStudyofMarkKeeble4.png);
+        }
+  
+        80% {
+            background-image: url(images/thumbnails/TheCuriousCaseStudyofMarkKeeble/TheCuriousCaseStudyofMarkKeeble5.png);
+        }
+      }
+  
+      #studyAnim {
+        background-image: url(images/thumbnails/TheCuriousCaseStudyofMarkKeeble/TheCuriousCaseStudyofMarkKeeble.png);
+        background-position: center;
+        background-size: contain;
+  
+        animation-name: study;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes pong {
+        0% {
+          background-image: url(images/thumbnails/StarPong/StarPong.png);
+        }
+  
+        33% {
+          background-image: url(images/thumbnails/StarPong/StarPong2.png);
+        }
+  
+        66% {
+          background-image: url(images/thumbnails/StarPong/StarPong3.png);
+        }
+      }
+
+      #pongAnim {
+        background-image: url(images/thumbnails/StarPong/StarPong.png);
+        background-position: center;
+        background-size: contain;
+  
+        animation-name: pong;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes crypt {
+        0% {
+          background-image: url(images/thumbnails/CryptWalker/CryptWalker.png);
+        }
+  
+        20% {
+            background-image: url(images/thumbnails/CryptWalker/CryptWalker2.png);
+        }
+  
+        40% {
+            background-image: url(images/thumbnails/CryptWalker/CryptWalker3.png);
+        }
+  
+        60% {
+            background-image: url(images/thumbnails/CryptWalker/CryptWalker4.png);
+        }
+  
+        80% {
+            background-image: url(images/thumbnails/CryptWalker/CryptWalker5.png);
+        }
+      }
+  
+      #cryptAnim {
+        background-image: url(images/thumbnails/CryptWalker/CryptWalker.png);
+        background-position: center;
+        background-size: contain;
+  
+        animation-name: crypt;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes berry {
+        0% {
+          background-image: url(images/thumbnails/BlueBerryBoy/BlueBerryBoy.png);
+        }
+  
+        33% {
+          background-image: url(images/thumbnails/BlueBerryBoy/BlueBerryBoy2.png);
+        }
+  
+        66% {
+          background-image: url(images/thumbnails/BlueBerryBoy/BlueBerryBoy3.png);
+        }
+      }
+
+      #berryAnim {
+        background-image: url(images/thumbnails/BlueBerryBoy/BlueBerryBoy.png);
+        background-position: center;
+        background-size: contain;
+  
+        animation-name: berry;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes fields {
+        0% {
+          background-image: url(images/thumbnails/FieldsofArdelon/FieldsofArdelon.png);
+        }
+  
+        16.67% {
+            background-image: url(images/thumbnails/FieldsofArdelon/FieldsofArdelon2.png);
+        }
+  
+        33.3% {
+            background-image: url(images/thumbnails/FieldsofArdelon/FieldsofArdelon3.png);
+        }
+  
+        50% {
+            background-image: url(images/thumbnails/FieldsofArdelon/FieldsofArdelon4.png);
+        }
+  
+        66.67% {
+            background-image: url(images/thumbnails/FieldsofArdelon/FieldsofArdelon5.png);
+        }
+
+        83.3% {
+            background-image: url(images/thumbnails/FieldsofArdelon/FieldsofArdelon5.png);
+        }
+      }
+  
+      #fieldsAnim {
+        background-image: url(images/thumbnails/FieldsofArdelon/FieldsofArdelon.png);
+        background-position: center;
+        background-size: contain;
+  
+        animation-name: fields;
+        animation-duration: 24s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes alien {
+        0% {
+          background-image: url(images/thumbnails/AlienShowmatch/AlienShowmatch.png);
+        }
+  
+        50% {
+          background-image: url(images/thumbnails/AlienShowmatch/AlienShowmatch2.png);
+        }
+  
+      }
+
+      #alienAnim {
+        background-image: url(images/thumbnails/AlienShowmatch/AlienShowmatch.png);
+        background-position: center;
+        background-size: contain;
+  
+        animation-name: alien;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+      }
+      
+    /* Css */
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 2em;
+    }
+
+    /* Header */
+
+    #header {
+      display: grid;
+      grid-template-columns: 30% auto;
+    }
+
+    .gridThree {
+      display: grid;
+      grid-template-columns: auto auto auto;
+
+      font-family: 'Raleway';
+      font-size: 1.25em;
+      text-align: center;
+
+    }
+
+    .gridThree>a {
+      position: relative;
+      top: 50%;
+      transform: translate(3.5vw, -16.67%);
+      color: black;
+      text-decoration: none;
+
+      font-family: 'PT Sans';
+    }
+
+    .gridThree>a:hover {
+      color: blue;
+    }
+
+    /* Content Header */
+    #contentImage {
+      background-image: url(./images/backgroundimage.png);
+      background-size: contain;
+      background-repeat: repeat;
+      background-position: left -50px center;
+      min-height: 42.5vh;
+    }
+
+    #contentTitle {
+      position: relative;
+      top: 0;
+      left: 200px;
+      background-color: blue;
+    }
+
+    .centerText {
+      text-align: center;
+    }
+
+    #mainTitleText {
+      font-family: 'Raleway', 'serif';
+      font-size: 4em;
+      font-weight: 100;
+      line-height: 1.5em;
+    }
+
+    #subTitleText {
+      font-family: 'Raleway', 'serif';
+      font-size: 2em;
+      font-weight: 100;
+      line-height: 1.75em;
+    }
+
+    /* Common */
+
+    .subsection {
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+    }
+
+    /* TLDR */
+
+    #tldrContainer {
+      font-size: 1.25em;
+      font-family: 'Raleway', 'Serif';
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    #tldrTitle {
+      font-size: 1.5em;
+    }
+
+    #tldrContent {}
+
+    /* Platforms */
+
+    #platformsContainer {
+      font-size: 1.25em;
+      font-family: 'Raleway', 'Serif';
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    #platformsTitle {
+      font-size: 1.5em;
+    }
+
+    #platformsContent {}
+
+    #platformsGrid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      text-align: center;
+    }
+
+    .platformsIMG {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      border: 1px solid black;
+    }
+
+    .platformsGridTitle {
+      font-size: 1.25em;
+      font-weight: 100;
+    }
+
+    /* footer */
+
+    #footer {
+      padding-left: 40%;
+      padding-right: 40%;
+      text-align: center;
+      font-family: 'Raleway';
+    }
+
+    #emailLine {
+      font-size: 0.9em;
+    }
+
+    #footerGrid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+
+    .footerGridIMG {
+      position: relative;
+      width: 75%;
+
+      filter: brightness(0);
+    }
+
+    .footerGridIMG:hover {
+      filter: brightness(1);
+    }
+
+    /* Portfolio */
+
+    #portfolioDrop {
+      position: relative;
+      top: 0px;
+      right: 0px;
+      display: none;
+      grid-template-columns: auto auto auto;
+      font-size: 0.75em;
+      height: auto;
+      background-color: red;
+    }
+
+    #portfolioStack {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    #portfolioTitle {
+      font-size: 2em;
+      font-family: 'Raleway';
+      text-align: center;
+    }
+
+    #portfolioDisplay {}
+
+    #catagories {
+      font-size: 1.25em;
+      font-family: 'Raleway';
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2.5%;
+    }
+
+    /* Languages/Environment */
+
+    #languagesContainer {
+      font-size: 1.25em;
+      font-family: 'Raleway', 'Serif';
+      padding-left: 20%;
+      padding-right: 20%;
+
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 39%, rgba(0, 0, 0, 1) 100%);
+      color: white;
+    }
+
+    #languagesTitle {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    #languagesGrid {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      text-align: center;
+    }
+
+    .languagesGridTitle {
+      font-size: 2em;
+      font-weight: 100;
+      padding: 2%;
+    }
+
+    .collabList {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        text-align: left;
+        font-size: 1.25em;
+    }
+
+    /* Start */
+
+    .startHidden {
+      display: none;
+    }
+
+    #gamesGrid {
+      display: grid;
+      grid-template-columns: auto;
+
+      margin-top: 2%;
+      margin-bottom: 2%;
+
+      font-size: 1em;
+    }
+
+    .gameContainer {
+      font-family: 'Raleway';
+      border: 1px solid black;
+      padding: 2%;
+    }
+
+    .gameGridContainer {
+      display: grid;
+      grid-template-columns: 55% auto;
+
+      margin-bottom: 2%;
+    }
+
+    .gameBlock {
+      display: grid;
+      grid-template-columns: auto;
+      filter: drop-shadow(2px 5px 85 black);
+
+      font-size: 0.8em;
+    }
+
+    .gameBlock > a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .gameBlock > a:hover {
+        color: blue;
+    }
+
+    #gamesIntro {
+      font-family: 'Raleway';
+    }
+
+    .gameThumb {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .gameThumbIMG {
+        height: 80%;
+        border: 1px solid black;
+    }
+
+    #gameName {
+      font-size: 2.5em;
+    }
+
+    .gameText {
+      font-size: 1.5em;
+    }
+
+    .comingSoon {
+      font-family: 'Raleway';
+      font-size: 1.25em;
+    }
+
+    #portfolioMusic {
+      font-family: 'Raleway';
+      font-size: 1.75em;
+      text-align: center;
+    }
+
+    #musicGrid {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    /* Name */
+    @media only screen and (max-width: 1920px) {
+      #nameText {
+        position: relative;
+        left: 2vw;
+        font-family: 'Raleway';
+        font-size: 4em;
+      }
+    }
+
+    @media only screen and (max-width: 1224px) {
+      #nameText {
+        position: relative;
+        left: 2vw;
+        font-family: 'Raleway';
+        font-size: 3em;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      #nameText {
+        position: relative;
+        left: 2vw;
+        font-family: 'Raleway';
+        font-size: 2em;
+      }
+    }
+
+    #nameGrid {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    #selfTitle {
+      position: relative;
+      left: 2vw;
+
+      color: white;
+
+      font-family: 'Raleway';
+      font-size: 2em;
+    }
+
+    .gamesText {
+      padding-bottom: 2%;
+    }
